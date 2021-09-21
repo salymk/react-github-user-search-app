@@ -55,3 +55,29 @@ h2 {
   color: var(--clr-primary-400);
   font-weight: var(--fw-500);
 }
+
+.container {
+  max-width: var(--max-width-100);
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    color: var(--clr-primary-300);
+
+    p {
+      margin-right: 1rem;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 700;
+    }
+  }
+}
