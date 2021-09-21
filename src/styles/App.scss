@@ -1,5 +1,31 @@
 @import "./reset.scss";
 
-h1 {
-  color: red;
+// Typography: Space Mono
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --clr-primary-100: #0079ff;
+  --clr-primary-200: #697c9a;
+  --clr-primary-300: #4b6a9b;
+  --clr-primary-400: #2b3442;
+  --clr-primary-500: #f6f8ff;
+  --clr-primary-600: #fefefe;
+
+  --clr-dark-mode-100: #ffffff;
+  --clr-dark-mode-200: #141d2f;
+  --clr-dark-mode-300: #1e2a47;
+
+  --ff: "Space Mono", monospace;
+
+  --fw-400: 400;
+  --fw-500: 700;
+
+  --fs-100: 0.9375rem;
+  --fs-200: 1.375rem;
+  --fs-300: 1.625rem;
+
+  --br-100: 0.625rem;
+  --br-200: 0.9375rem;
+
+  --bs-100: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 }
