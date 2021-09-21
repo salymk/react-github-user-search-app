@@ -34,7 +34,7 @@
   --max-width-300: 45.625rem;
 }
 
-// Base styles
+// Base
 
 body {
   font-size: var(--fs-100);
@@ -56,12 +56,17 @@ h2 {
   font-weight: var(--fw-500);
 }
 
+// Utilities
+
 .container {
   max-width: var(--max-width-100);
   margin: 0 auto;
   padding: 1.5rem 1rem;
 }
 
+// Components
+
+// Nav
 nav {
   display: flex;
   justify-content: space-between;
