@@ -1,6 +1,5 @@
 import React from 'react';
-import Sun from '../assets/icon-sun.svg';
-import Moon from '../assets/icon-moon.svg';
+import MoonIcon from '../icon-components/MoonIcon';
 
 const Header = () => (
   <header className="container">
@@ -8,7 +7,7 @@ const Header = () => (
       <h1>devfinder</h1>
       <button type="button">
         <p>Dark</p>
-        <img src={Moon} alt="Moon" />
+        <MoonIcon fill="red" />
       </button>
     </nav>
   </header>
