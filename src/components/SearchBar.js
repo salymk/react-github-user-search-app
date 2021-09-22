@@ -13,7 +13,7 @@ const SearchBar = () => (
         name="search"
         placeholder="Search GitHub username..."
       />
-      <img src={SearchSVG} alt="search" className="search-icon" />
+      <SearchIcon viewBox="0 0 24 24" className="search-icon" />
 
       <button type="submit">Search</button>
     </div>
