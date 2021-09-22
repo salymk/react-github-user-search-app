@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchIcon from '../icon-components/SearchIcon';
+import SearchSVG from '../assets/icon-search.svg';
 
 const SearchBar = () => (
   <div className="search-wrap">
@@ -12,7 +13,7 @@ const SearchBar = () => (
         name="search"
         placeholder="Search GitHub username..."
       />
-      <SearchIcon className="search-icon" />
+      <img src={SearchSVG} alt="search" className="search-icon" />
 
       <button type="submit">Search</button>
     </div>
