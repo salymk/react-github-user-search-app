@@ -110,7 +110,7 @@ nav {
     border: none;
     background: none;
     color: var(--clr-primary-300);
-    font-size: 0.875rem;
+    font-size: var(--fs-toggle);
 
     p {
       margin-right: 1rem;
@@ -145,7 +145,7 @@ nav {
 
     button {
       padding: 12.5px 18px;
-      font-size: 14px;
+      font-size: var(--fs-button);
       font-weight: var(--fw-500);
       color: var(--clr-dark-mode-100);
       background-color: var(--clr-primary-100);
