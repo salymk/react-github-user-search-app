@@ -3,23 +3,23 @@ import CompanySVG from '../assets/icon-location.svg';
 
 const UserLinks = () => (
   <>
-    <div className="user-social">
+    <div className="user-links">
       <ul>
         <li>
-          <p>San Francisco</p>
           <img src={CompanySVG} alt="company" />
+          <p>San Francisco</p>
         </li>
         <li>
-          <p>San Francisco</p>
           <img src={CompanySVG} alt="company" />
+          <p>San Francisco</p>
         </li>
         <li>
-          <p>San Francisco</p>
           <img src={CompanySVG} alt="company" />
+          <p>San Francisco</p>
         </li>
         <li>
-          <p>San Francisco</p>
           <img src={CompanySVG} alt="company" />
+          <p>San Francisco</p>
         </li>
       </ul>
     </div>
