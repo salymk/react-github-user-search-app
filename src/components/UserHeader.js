@@ -10,7 +10,12 @@ const UserHeader = () => (
       <div className="user-header__info">
         <div className="name">
           <h2>The Octocat</h2>
-          <a href="https://github.com/octocat" target="_blank" rel="noreferrer">
+          <a
+            className="username"
+            href="https://github.com/octocat"
+            target="_blank"
+            rel="noreferrer"
+          >
             @octocat
           </a>
         </div>
