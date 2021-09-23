@@ -61,7 +61,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: var(--fs-name);
   color: var(--clr-primary-400);
   font-weight: var(--fw-500);
 }
@@ -204,13 +204,13 @@ nav {
 
       .username {
         color: var(--clr-primary-100);
-        font-size: 0.8125rem;
+        font-size: var(--fs-username);
         text-decoration: none;
       }
     }
 
     .date {
-      font-size: 0.8125rem;
+      font-size: var(--fs-date);
       color: var(--clr-primary-200);
     }
   }
@@ -264,6 +264,18 @@ nav {
   .container {
     max-width: var(--max-width-200);
     margin: 0 auto;
+  }
+
+  :root {
+    --fs-button: 1rem;
+    --fs-input-placeholder: 1.125rem;
+    --fs-name: 1.625rem;
+    --fs-username: 1rem;
+    --fs-date: 0.9375rem;
+    --fs-bio: 0.9375rem;
+    --fs-repos: 0.8125rem;
+    --fs-stat-number: 1.375rem;
+    --fs-social: 0.9375rem;
   }
 }
 
