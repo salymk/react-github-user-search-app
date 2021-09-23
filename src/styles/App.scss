@@ -261,9 +261,25 @@ nav {
 }
 
 @media (min-width: 768px) {
+  :root {
+    --fs-button: 1rem;
+    --fs-input-placeholder: 1.125rem;
+    --fs-name: 1.625rem;
+    --fs-username: 1rem;
+    --fs-date: 0.9375rem;
+    --fs-bio: 0.9375rem;
+    --fs-repos: 0.8125rem;
+    --fs-stat-number: 1.375rem;
+    --fs-social: 0.9375rem;
+  }
+
   .container {
     max-width: var(--max-width-200);
     margin: 0 auto;
+  }
+
+  .user-container {
+    padding: 2.5rem;
   }
 
   .user-header {
@@ -280,17 +296,9 @@ nav {
       margin-left: 2.5625rem;
     }
   }
-
-  :root {
-    --fs-button: 1rem;
-    --fs-input-placeholder: 1.125rem;
-    --fs-name: 1.625rem;
-    --fs-username: 1rem;
-    --fs-date: 0.9375rem;
-    --fs-bio: 0.9375rem;
-    --fs-repos: 0.8125rem;
-    --fs-stat-number: 1.375rem;
-    --fs-social: 0.9375rem;
+  .user-stats ul li {
+    text-align: left;
+    margin-left: -2rem;
   }
 }
 
