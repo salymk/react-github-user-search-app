@@ -162,3 +162,17 @@ nav {
     }
   }
 }
+
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--max-width-200);
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--max-width-300);
+    margin: 0 auto;
+  }
+}
