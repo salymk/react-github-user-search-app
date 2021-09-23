@@ -238,6 +238,25 @@ nav {
   }
 }
 
+// UserLinks
+
+.user-links {
+  ul {
+    li {
+      display: flex;
+      margin-bottom: 1rem;
+
+      img {
+        margin-right: 0.8125rem;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     max-width: var(--max-width-200);
