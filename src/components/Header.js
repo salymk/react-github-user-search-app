@@ -2,7 +2,7 @@ import React from 'react';
 import MoonIcon from '../icon-components/MoonIcon';
 
 const Header = () => (
-  <header className="container">
+  <header className="container header">
     <nav>
       <h1>devfinder</h1>
       <button className="toggle-btn" type="button">

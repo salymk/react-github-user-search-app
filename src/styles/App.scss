@@ -95,7 +95,7 @@ li {
 // Components
 
 // Nav
-header {
+.header {
   padding-top: 2rem;
   padding-bottom: 2.25rem;
 }
@@ -294,8 +294,17 @@ nav {
     margin: 0 auto;
   }
 
+  .header {
+    padding-top: 8.75rem;
+  }
+
+  .search-wrap__search-box input {
+    padding: 1.25rem 3rem;
+  }
+
   .user-container {
     padding: 2.5rem;
+    margin-top: 1.5rem;
   }
 
   .user-header {
