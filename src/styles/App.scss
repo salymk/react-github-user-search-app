@@ -80,7 +80,7 @@ li {
 .container {
   max-width: var(--max-width-100);
   margin: 0 auto;
-  padding: 1.5rem 1rem;
+  padding: 0 1rem;
 }
 
 .sr-only {
@@ -95,6 +95,11 @@ li {
 // Components
 
 // Nav
+header {
+  padding-top: 2rem;
+  padding-bottom: 2.25rem;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -245,13 +250,11 @@ nav {
     li {
       display: flex;
       margin-bottom: 1rem;
+      color: var(--clr-primary-300);
 
-      img {
-        margin-right: 0.8125rem;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
+      p {
+        margin-left: 0.8125rem;
+        font-size: var(--fs-social);
       }
     }
   }
