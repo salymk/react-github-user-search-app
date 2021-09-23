@@ -21,6 +21,18 @@
   --fw-400: 400;
   --fw-500: 700;
 
+  --fs-title: 1.625rem;
+  --fs-toggle: 0.8125rem;
+  --fs-button: 0.875rem;
+  --fs-input-placeholder: 0.8125rem;
+  --fs-name: 1rem;
+  --fs-username: 0.8125rem;
+  --fs-date: 0.8125rem;
+  --fs-bio: 0.8125rem;
+  --fs-repos: 0.6875rem;
+  --fs-stat-number: 1rem;
+  --fs-social: 0.8125rem;
+
   --br-100: 0.625rem;
   --br-200: 0.9375rem;
 
@@ -177,6 +189,8 @@ nav {
     }
 
     .date {
+      font-size: 0.8125rem;
+      color: var(--clr-primary-200);
     }
   }
 }
