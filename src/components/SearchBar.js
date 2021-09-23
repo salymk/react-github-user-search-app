@@ -14,7 +14,9 @@ const SearchBar = () => (
       />
       <SearchIcon viewBox="0 0 24 24" className="search-icon" />
 
-      <button type="submit">Search</button>
+      <button className="search-btn" type="submit">
+        Search
+      </button>
     </div>
   </div>
 );

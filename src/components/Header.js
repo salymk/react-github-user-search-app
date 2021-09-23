@@ -5,7 +5,7 @@ const Header = () => (
   <header className="container">
     <nav>
       <h1>devfinder</h1>
-      <button type="button">
+      <button className="toggle-btn" type="button">
         <p>Dark</p>
         <MoonIcon fill="red" />
       </button>
