@@ -155,10 +155,18 @@ nav {
 
 .user-container {
   margin-top: 1rem;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+
+  .bio {
+    margin-top: 2.0625rem;
+    font-size: var(--fs-bio);
+    line-height: 25px;
+    color: var(--clr-primary-300);
+    text-align: left;
+  }
 }
 
 // User Header
