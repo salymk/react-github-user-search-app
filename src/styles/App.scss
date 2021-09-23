@@ -137,3 +137,28 @@ nav {
     }
   }
 }
+
+// User container
+
+.user-container {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+}
+
+// User Header
+.user-header {
+  display: flex;
+  align-items: center;
+  &__img {
+    img {
+      width: 70px;
+      height: 70px;
+      overflow: hidden;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}
