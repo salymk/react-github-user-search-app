@@ -309,7 +309,7 @@ nav {
       }
     }
     &__info {
-      margin-left: 2.5625rem;
+      margin-left: 2.5rem;
     }
   }
   .user-stats ul li {
@@ -347,6 +347,7 @@ nav {
   }
 
   .user-container {
+    padding-bottom: 0;
     display: grid;
     grid-template-columns: 0.6fr 1.4fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -359,13 +360,26 @@ nav {
       ". user-content user-content"
       ". user-content user-content"
       ". user-content user-content";
+
+    .bio {
+      margin-top: 0;
+    }
   }
 
   .user-header {
     grid-area: user-header;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: baseline;
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
   }
 
   .user-content {
     grid-area: user-content;
+    margin-left: 2.5rem;
   }
 }
