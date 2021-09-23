@@ -1,6 +1,5 @@
 import React from 'react';
 import SearchIcon from '../icon-components/SearchIcon';
-import SearchSVG from '../assets/icon-search.svg';
 
 const SearchBar = () => (
   <div className="search-wrap">
