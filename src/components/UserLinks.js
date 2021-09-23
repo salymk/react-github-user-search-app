@@ -1,25 +1,28 @@
 import React from 'react';
-import CompanySVG from '../assets/icon-location.svg';
+import CompanyIcon from '../icon-components/CompanyIcon';
+import LocationIcon from '../icon-components/LocationIcon';
+import TwitterIcon from '../icon-components/TwitterIcon';
+import WebsiteIcon from '../icon-components/WebsiteIcon';
 
 const UserLinks = () => (
   <>
     <div className="user-links">
       <ul>
         <li>
-          <img src={CompanySVG} alt="company" />
+          <LocationIcon alt="Location" />
           <p>San Francisco</p>
         </li>
         <li>
-          <img src={CompanySVG} alt="company" />
-          <p>San Francisco</p>
+          <WebsiteIcon alt="Website link" />
+          <p>https://github.blog</p>
         </li>
         <li>
-          <img src={CompanySVG} alt="company" />
-          <p>San Francisco</p>
+          <TwitterIcon alt="Twitter" />
+          <p>Not Available</p>
         </li>
         <li>
-          <img src={CompanySVG} alt="company" />
-          <p>San Francisco</p>
+          <CompanyIcon alt="Company" />
+          <p>@github</p>
         </li>
       </ul>
     </div>
