@@ -66,6 +66,15 @@ h2 {
   font-weight: var(--fw-500);
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
 // Utilities
 
 .container {
@@ -198,6 +207,33 @@ nav {
     .date {
       font-size: 0.8125rem;
       color: var(--clr-primary-200);
+    }
+  }
+}
+
+// UserStats
+.user-stats {
+  padding: 18px 15px;
+  background-color: var(--clr-primary-500);
+  border-radius: var(--br-100);
+  margin: 2.5625rem 0;
+  ul {
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      text-align: center;
+
+      p {
+        font-size: var(--fs-repos);
+        margin-bottom: 8px;
+        color: var(--clr-primary-300);
+      }
+      h3 {
+        font-size: var(--fs-stat-number);
+        color: var(--clr-primary-400);
+        font-weight: var(--fw-500);
+      }
     }
   }
 }
