@@ -266,6 +266,21 @@ nav {
     margin: 0 auto;
   }
 
+  .user-header {
+    &__img {
+      img {
+        width: 117px;
+        height: 117px;
+        overflow: hidden;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+    &__info {
+      margin-left: 2.5625rem;
+    }
+  }
+
   :root {
     --fs-button: 1rem;
     --fs-input-placeholder: 1.125rem;
