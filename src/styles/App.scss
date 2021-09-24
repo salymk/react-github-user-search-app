@@ -75,6 +75,14 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 // Utilities
 
 .container {
@@ -265,6 +273,12 @@ nav {
       p {
         margin-left: 0.8125rem;
         font-size: var(--fs-social);
+      }
+
+      a {
+        margin-left: 0.8125rem;
+        font-size: var(--fs-social);
+        color: var(--clr-primary-300);
       }
     }
 

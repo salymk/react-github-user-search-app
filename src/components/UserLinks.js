@@ -14,7 +14,7 @@ const UserLinks = () => (
         </li>
         <li>
           <WebsiteIcon alt="Website link" />
-          <p>https://github.blog</p>
+          <a href="https://github.blog">https://github.blog</a>
         </li>
         <li>
           <TwitterIcon alt="Twitter" />
