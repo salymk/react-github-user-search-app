@@ -86,9 +86,9 @@ a:hover {
 // Utilities
 
 .container {
-  max-width: var(--max-width-100);
+  max-width: 400px;
   margin: 0 auto;
-  // padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .sr-only {
