@@ -32,7 +32,9 @@ const SearchBar = () => {
       });
   }, [username]);
 
-  console.log(profile);
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <div className="search-wrap">
@@ -48,7 +50,7 @@ const SearchBar = () => {
           onChange={(e) => setInput(e.target.value)}
         />
         <SearchIcon viewBox="0 0 24 24" className="search-icon" />
-
+        <span className="error">{error || ''}</span>
         <button onClick={handleSubmit} className="search-btn" type="submit">
           Search
         </button>

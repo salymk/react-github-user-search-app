@@ -150,6 +150,14 @@ nav {
       caret-color: var(--clr-primary-100);
     }
 
+    .error {
+      position: absolute;
+      left: 1rem;
+      top: 18px;
+      color: red;
+      height: 20px;
+    }
+
     .search-icon {
       position: absolute;
       left: 1rem;
