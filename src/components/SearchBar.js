@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useQuery } from 'react-query';
 import SearchIcon from '../icon-components/SearchIcon';
 
 function getGithubProfile(username) {
@@ -7,34 +8,18 @@ function getGithubProfile(username) {
   );
 }
 
-const SearchBar = () => {
+const SearchBar = (props) => {
   const [input, setInput] = useState('');
   const [username, setUserName] = useState('salymk');
-  const [profile, setProfile] = useState();
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
-  function handleSubmit() {
-    return setUserName(input);
-  }
+  const { data, error, isLoading, isFetching } = useQuery('profile', () =>
+    fetch(`https://api.github.com/users/${username}`).then((res) => res.json())
+  );
 
-  useEffect(() => {
-    getGithubProfile(username)
-      .then((data) => {
-        setProfile(data);
-        setError(null);
-        setLoading(false);
-      })
-      .catch((e) => {
-        console.warn(e.message);
-        setError('No result');
-        setLoading(false);
-      });
-  }, [username]);
+  if (isLoading) return 'Loading...';
+  if (error) return `An error has occured: ${error.message}`;
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+  console.log(data);
 
   return (
     <div className="search-wrap">
@@ -48,10 +33,15 @@ const SearchBar = () => {
           placeholder="Search GitHub username..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          {...props}
         />
         <SearchIcon viewBox="0 0 24 24" className="search-icon" />
-        <span className="error">{error || ''}</span>
-        <button onClick={handleSubmit} className="search-btn" type="submit">
+        {/* <span className="error">{error || ''}</span> */}
+        <button
+          onClick={() => setUserName(input)}
+          className="search-btn"
+          type="submit"
+        >
           Search
         </button>
       </div>
