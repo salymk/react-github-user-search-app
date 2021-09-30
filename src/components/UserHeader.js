@@ -1,6 +1,9 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { DateTime } from 'luxon';
+
+console.log(DateTime.fromISO('2016-08-23T02:31:27Z').toFormat('dd LLL yyyy'));
 
 const UserHeader = (props) => (
   <>
@@ -20,7 +23,9 @@ const UserHeader = (props) => (
             @{props.login}
           </a>
         </div>
-        <p className="date">Joined {props.created_at}</p>
+        <p className="date">{`Joined ${DateTime.fromISO(
+          props.created_at
+        ).toFormat('dd LLL yyyy')}`}</p>
       </div>
     </div>
   </>
