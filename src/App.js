@@ -51,7 +51,12 @@ function App() {
                     followers={data.followers}
                     following={data.following}
                   />
-                  <UserLinks />
+                  <UserLinks
+                    location={data.location}
+                    website={data.blog}
+                    twitter={data.twitter_username}
+                    company={data.company}
+                  />
                 </div>
               </>
             )}
