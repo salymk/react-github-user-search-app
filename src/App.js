@@ -1,9 +1,13 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import './styles/App.scss';
 import UserContainer from './components/UserContainer';
 import useProfile from './hooks/useProfile';
+import UserHeader from './components/UserHeader';
+import UserLinks from './components/UserLinks';
+import UserStats from './components/UserStats';
 
 function App() {
   const [input, setInput] = useState('');
@@ -11,9 +15,6 @@ function App() {
   const { data, isLoading, isError, error, isFetching } = useProfile(username);
 
   if (error) return `An error has occured: ${error.message}`;
-
-  console.log(data);
-  console.log(isError);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,7 +30,28 @@ function App() {
           onChange={(e) => setInput(e.target.value)}
           onSubmit={handleSubmit}
         />
-        {isLoading ? 'Loading...' : <UserContainer bio={data?.bio} />}
+        <UserContainer>
+          <div className="user-container">
+            {isLoading ? (
+              '...'
+            ) : (
+              <UserHeader
+                img={data.avatar_url}
+                name={data.name}
+                url={data.url}
+                login={data.login}
+                created_at={data.created_at}
+              />
+            )}
+
+            <div className="user-content">
+              <p className="bio">{data?.bio}</p>
+
+              <UserStats />
+              <UserLinks />
+            </div>
+          </div>
+        </UserContainer>
         {/* <UserContainer /> */}
       </main>
     </>
