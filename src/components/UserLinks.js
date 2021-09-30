@@ -11,21 +11,23 @@ const UserLinks = (props) => (
   <>
     <div className="user-links">
       <ul>
-        <li>
+        <li style={{ opacity: props.location ? null : '.5' }}>
           <LocationIcon alt="Location" />
-          <p>{props.location}</p>
+          <p>{props.location ? props.location : ' Not Available'}</p>
         </li>
-        <li>
+        <li style={{ opacity: props.website ? null : '.5' }}>
           <WebsiteIcon alt="Website link" />
-          <a href="https://github.blog">{props.website}</a>
+          <a href="https://github.blog">
+            {props.website ? props.website : ' Not Available'}
+          </a>
         </li>
-        <li>
+        <li style={{ opacity: props.twitter ? null : '.5' }}>
           <TwitterIcon alt="Twitter" />
-          <p>{props.twitter ? props.twitter : 'Not Available'}</p>
+          <p>{props.twitter ? props.twitter : ' Not Available'}</p>
         </li>
-        <li>
+        <li style={{ opacity: props.company ? null : '.5' }}>
           <CompanyIcon alt="Company" />
-          <p>@{props.company}</p>
+          <p>{props.company ? props.company : ' Not Available'}</p>
         </li>
       </ul>
     </div>
