@@ -17,13 +17,19 @@ const UserLinks = (props) => (
         </li>
         <li style={{ opacity: props.website ? null : '.5' }}>
           <WebsiteIcon alt="Website link" />
-          <a href="https://github.blog">
+          <a href={props.website} target="_blank" rel="noreferrer">
             {props.website ? props.website : ' Not Available'}
           </a>
         </li>
         <li style={{ opacity: props.twitter ? null : '.5' }}>
           <TwitterIcon alt="Twitter" />
-          <p>{props.twitter ? props.twitter : ' Not Available'}</p>
+          <a
+            href={`https://twitter.com/${props.twitter}/`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {props.twitter ? props.twitter : ' Not Available'}
+          </a>
         </li>
         <li style={{ opacity: props.company ? null : '.5' }}>
           <CompanyIcon alt="Company" />
