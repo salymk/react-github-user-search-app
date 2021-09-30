@@ -12,9 +12,9 @@ import UserStats from './components/UserStats';
 function App() {
   const [input, setInput] = useState('');
   const [username, setUserName] = useState('salymk');
-  const { data, isLoading, isError, error, isFetching } = useProfile(username);
+  const { data, isLoading, isError, error } = useProfile(username);
 
-  if (error) return `An error has occured: ${error.message}`;
+  if (isError) return `An error has occured: ${error.message}`;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,21 +35,26 @@ function App() {
             {isLoading ? (
               '...'
             ) : (
-              <UserHeader
-                img={data.avatar_url}
-                name={data.name}
-                url={data.url}
-                login={data.login}
-                created_at={data.created_at}
-              />
+              <>
+                <UserHeader
+                  img={data.avatar_url}
+                  name={data.name}
+                  url={data.url}
+                  login={data.login}
+                  created_at={data.created_at}
+                />
+                <div className="user-content">
+                  <p className="bio">{data.bio}</p>
+
+                  <UserStats
+                    repos={data.public_repos}
+                    followers={data.followers}
+                    following={data.following}
+                  />
+                  <UserLinks />
+                </div>
+              </>
             )}
-
-            <div className="user-content">
-              <p className="bio">{data?.bio}</p>
-
-              <UserStats />
-              <UserLinks />
-            </div>
           </div>
         </UserContainer>
         {/* <UserContainer /> */}
