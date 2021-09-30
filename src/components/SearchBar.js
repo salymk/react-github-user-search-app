@@ -1,30 +1,9 @@
 /* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
-import React, { useState } from 'react';
-import { useQuery } from 'react-query';
+import React from 'react';
+import PropTypes from 'prop-types';
 import SearchIcon from '../icon-components/SearchIcon';
 
 const SearchBar = (props) => (
-  // const [input, setInput] = useState('');
-  // const [username, setUserName] = useState('');
-
-  // const { data, error, isLoading, isError } = useQuery(
-  //   ['profile', username],
-  //   () =>
-  //     fetch(`https://api.github.com/users/${username}`).then((res) =>
-  //       res.json()
-  //     ),
-  //   {
-  //     enabled: Boolean(username),
-  //   }
-  // );
-
-  // if (isLoading) return 'Loading...';
-  // if (error) return `An error has occured: ${error.message}`;
-
-  // console.log(data);
-  // console.log(isError);
-
   <>
     <div className="search-wrap">
       <form onSubmit={props.onSubmit}>
@@ -36,20 +15,10 @@ const SearchBar = (props) => (
             id="search"
             name="search"
             placeholder="Search GitHub username..."
-            // value={input}
-            // onChange={(e) => setInput(e.target.value)}
             {...props}
           />
           <SearchIcon viewBox="0 0 24 24" className="search-icon" />
-          <button
-            // onClick={() => {
-            //   setUserName(input);
-            //   setInput('');
-            // }}
-            // eslint-disable-next-line react/destructuring-assignment
-            className="search-btn"
-            type="submit"
-          >
+          <button className="search-btn" type="submit">
             Search
           </button>
         </div>
@@ -58,3 +27,7 @@ const SearchBar = (props) => (
   </>
 );
 export default SearchBar;
+
+SearchBar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
