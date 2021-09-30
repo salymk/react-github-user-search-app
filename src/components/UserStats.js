@@ -26,7 +26,7 @@ const UserStats = (props) => (
 export default UserStats;
 
 UserStats.propTypes = {
-  repos: PropTypes.string.isRequired,
-  followers: PropTypes.string.isRequired,
-  following: PropTypes.string.isRequired,
+  repos: PropTypes.number.isRequired,
+  followers: PropTypes.number.isRequired,
+  following: PropTypes.number.isRequired,
 };
