@@ -43,8 +43,8 @@ const UserLinks = (props) => (
 export default UserLinks;
 
 UserLinks.propTypes = {
-  location: PropTypes.string.isRequired,
-  website: PropTypes.string.isRequired,
-  twitter: PropTypes.string.isRequired,
-  company: PropTypes.string.isRequired,
+  location: PropTypes.string,
+  website: PropTypes.string,
+  twitter: PropTypes.string,
+  company: PropTypes.string,
 };
