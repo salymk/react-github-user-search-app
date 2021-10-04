@@ -17,6 +17,7 @@ const SearchBar = (props) => (
             placeholder="Search GitHub username..."
             {...props}
           />
+          <span className="error"> {props.error ? 'No result' : ''}</span>
           <SearchIcon viewBox="0 0 24 24" className="search-icon" />
           <button className="search-btn" type="submit">
             Search
@@ -30,4 +31,5 @@ export default SearchBar;
 
 SearchBar.propTypes = {
   onSubmit: PropTypes.func.isRequired,
+  error: PropTypes.string,
 };
