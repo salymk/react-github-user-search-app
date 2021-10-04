@@ -6,7 +6,7 @@ export default function useProfile(username) {
     async () => {
       const response = await fetch(`https://api.github.com/users/${username}`);
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('No results');
       }
       return response.json();
     },
