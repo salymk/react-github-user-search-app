@@ -28,35 +28,36 @@ function App() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onSubmit={handleSubmit}
+          error={error}
         />
 
         {status === 'loading' ? (
           <p>Loading...</p>
-        ) : status === 'error?' ? (
-          <p>Error: {error.response.json()}</p>
+        ) : status === 'error' ? (
+          <p>Error: {error.message}</p>
         ) : (
           <UserContainer>
             <div className="user-container">
               <UserHeader
-                img={data?.avatar_url}
-                name={data?.name}
-                url={data?.url}
-                login={data?.login}
-                created_at={data?.created_at}
+                img={data.avatar_url}
+                name={data.name}
+                url={data.url}
+                login={data.login}
+                created_at={data.created_at}
               />
               <div className="user-content">
-                <p className="bio">{data?.bio}</p>
+                <p className="bio">{data.bio}</p>
 
                 <UserStats
-                  repos={data?.public_repos}
-                  followers={data?.followers}
-                  following={data?.following}
+                  repos={data.public_repos}
+                  followers={data.followers}
+                  following={data.following}
                 />
                 <UserLinks
-                  location={data?.location}
-                  website={data?.blog}
-                  twitter={data?.twitter_username}
-                  company={data?.company}
+                  location={data.location}
+                  website={data.blog}
+                  twitter={data.twitter_username}
+                  company={data.company}
                 />
               </div>
             </div>
