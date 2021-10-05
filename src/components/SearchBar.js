@@ -31,5 +31,5 @@ export default SearchBar;
 
 SearchBar.propTypes = {
   onSubmit: PropTypes.func.isRequired,
-  error: PropTypes.string,
+  error: PropTypes.object,
 };
