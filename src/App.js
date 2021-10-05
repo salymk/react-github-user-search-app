@@ -9,12 +9,16 @@ import useProfile from './hooks/useProfile';
 import UserHeader from './components/UserHeader';
 import UserLinks from './components/UserLinks';
 import UserStats from './components/UserStats';
+import { ThemeProvider } from './contexts/theme';
 
 function App() {
+  const [theme, setTheme] = useState('dark');
+  const toggleTheme = () =>
+    setTheme(() => (theme === 'light' ? 'dark' : 'light'));
+
   const [input, setInput] = useState('');
   const [username, setUserName] = useState('salymk');
   const { data, error, status } = useProfile(username);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setUserName(input);
@@ -22,48 +26,50 @@ function App() {
 
   return (
     <>
-      <Header />
-      <main className="container">
-        <SearchBar
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onSubmit={handleSubmit}
-          error={error}
-        />
+      <ThemeProvider value={theme}>
+        <Header toggleTheme={toggleTheme} />
+        <main className="container">
+          <SearchBar
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onSubmit={handleSubmit}
+            error={error}
+          />
 
-        {status === 'loading' ? (
-          <p>Loading...</p>
-        ) : status === 'error' ? (
-          <p>Error: {error.message}</p>
-        ) : (
-          <UserContainer>
-            <div className="user-container">
-              <UserHeader
-                img={data?.avatar_url}
-                name={data?.name}
-                url={data?.url}
-                login={data?.login}
-                created_at={data?.created_at}
-              />
-              <div className="user-content">
-                <p className="bio">{data?.bio}</p>
+          {status === 'loading' ? (
+            <p>Loading...</p>
+          ) : status === 'error' ? (
+            <p>Error: {error.message}</p>
+          ) : (
+            <UserContainer>
+              <div className="user-container">
+                <UserHeader
+                  img={data?.avatar_url}
+                  name={data?.name}
+                  url={data?.url}
+                  login={data?.login}
+                  created_at={data?.created_at}
+                />
+                <div className="user-content">
+                  <p className="bio">{data?.bio}</p>
 
-                <UserStats
-                  repos={data?.public_repos}
-                  followers={data?.followers}
-                  following={data?.following}
-                />
-                <UserLinks
-                  location={data?.location}
-                  website={data?.blog}
-                  twitter={data?.twitter_username}
-                  company={data?.company}
-                />
+                  <UserStats
+                    repos={data?.public_repos}
+                    followers={data?.followers}
+                    following={data?.following}
+                  />
+                  <UserLinks
+                    location={data?.location}
+                    website={data?.blog}
+                    twitter={data?.twitter_username}
+                    company={data?.company}
+                  />
+                </div>
               </div>
-            </div>
-          </UserContainer>
-        )}
-      </main>
+            </UserContainer>
+          )}
+        </main>
+      </ThemeProvider>
     </>
   );
 }
