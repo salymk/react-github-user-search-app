@@ -15,7 +15,7 @@ const SearchBar = (props) => {
           </label>
           <div className="search-wrap__search-box">
             <input
-              className={theme === 'dark' ? 'bg-dark' : ''}
+              className={theme === 'dark' ? 'dark-mode' : ''}
               id="search"
               name="search"
               placeholder="Search GitHub username..."
