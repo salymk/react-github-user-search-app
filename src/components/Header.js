@@ -9,8 +9,12 @@ const Header = ({ toggleTheme }) => {
   return (
     <header className="container header">
       <nav>
-        <h1>devfinder</h1>
-        <button onClick={toggleTheme} className="toggle-btn" type="button">
+        <h1 className={theme === 'dark' ? 'dark-mode' : ''}>devfinder</h1>
+        <button
+          onClick={toggleTheme}
+          className={`toggle-btn ${theme === 'dark' ? 'dark-mode' : ''}`}
+          type="button"
+        >
           {theme === 'light' ? (
             <div className="dark-icon">
               <p>Dark</p>

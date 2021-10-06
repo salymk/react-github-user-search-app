@@ -12,7 +12,7 @@ import UserStats from './components/UserStats';
 import { ThemeProvider } from './contexts/theme';
 
 function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
   const toggleTheme = () =>
     setTheme(() => (theme === 'light' ? 'dark' : 'light'));
 
@@ -42,7 +42,11 @@ function App() {
             <p>Error: {error.message}</p>
           ) : (
             <UserContainer>
-              <div className="user-container">
+              <div
+                className={`user-container ${
+                  theme === 'dark' ? 'bg-dark' : ''
+                }`}
+              >
                 <UserHeader
                   img={data?.avatar_url}
                   name={data?.name}
@@ -51,7 +55,9 @@ function App() {
                   created_at={data?.created_at}
                 />
                 <div className="user-content">
-                  <p className="bio">{data?.bio}</p>
+                  <p className={`bio ${theme === 'dark' ? 'dark-mode' : ''}`}>
+                    {data?.bio}
+                  </p>
 
                   <UserStats
                     repos={data?.public_repos}

@@ -2,34 +2,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { DateTime } from 'luxon';
+import ThemeContext from '../contexts/theme';
 
-console.log(DateTime.fromISO('2016-08-23T02:31:27Z').toFormat('dd LLL yyyy'));
-
-const UserHeader = (props) => (
-  <>
-    <div className="user-header">
-      <div className="user-header__img">
-        <img src={props.img} alt={`${props.name} profile`} />
-      </div>
-      <div className="user-header__info">
-        <div className="name">
-          <h2>{props.name}</h2>
-          <a
-            className="username"
-            href={props.url}
-            target="_blank"
-            rel="noreferrer"
-          >
-            @{props.login}
-          </a>
+const UserHeader = (props) => {
+  const theme = React.useContext(ThemeContext);
+  return (
+    <>
+      <div className="user-header">
+        <div className="user-header__img">
+          <img src={props.img} alt={`${props.name} profile`} />
         </div>
-        <p className="date">{`Joined ${DateTime.fromISO(
-          props.created_at
-        ).toFormat('dd LLL yyyy')}`}</p>
+        <div className="user-header__info">
+          <div className="name">
+            <h2 className={theme === 'dark' ? 'dark-mode' : ''}>
+              {props.name}
+            </h2>
+            <a
+              className="username"
+              href={props.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              @{props.login}
+            </a>
+          </div>
+          <p
+            className={`date ${theme === 'dark' ? 'dark-mode' : ''}`}
+          >{`Joined ${DateTime.fromISO(props.created_at).toFormat(
+            'dd LLL yyyy'
+          )}`}</p>
+        </div>
       </div>
-    </div>
-  </>
-);
+    </>
+  );
+};
 
 export default UserHeader;
 
