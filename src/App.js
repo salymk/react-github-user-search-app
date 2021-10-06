@@ -1,5 +1,4 @@
 /* eslint-disable no-nested-ternary */
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
@@ -24,6 +23,14 @@ function App() {
     setUserName(input);
   };
 
+  React.useEffect(() => {
+    if (theme === 'dark') {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [theme]);
+
   return (
     <>
       <ThemeProvider value={theme}>
@@ -44,7 +51,7 @@ function App() {
             <UserContainer>
               <div
                 className={`user-container ${
-                  theme === 'dark' ? 'bg-dark' : ''
+                  theme === 'dark' ? 'dark-mode' : ''
                 }`}
               >
                 <UserHeader
