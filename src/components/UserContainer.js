@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const UserContainer = ({ children }) => <>{children}</>;
+const UserContainer = ({ children }) => <div>{children}</div>;
 
 export default UserContainer;
 
