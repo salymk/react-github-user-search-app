@@ -54,10 +54,10 @@ body {
   color: var(--clr-primary-400);
 }
 
-// body.dark-theme {
-//   background-color: var(--clr-dark-mode-300);
-//   color: var(--clr-primary-600);
-// }
+body.dark-mode {
+  background-color: var(--clr-dark-mode-200);
+  color: var(--clr-dark-mode-100);
+}
 
 h1 {
   font-size: 1.625rem;
@@ -181,6 +181,12 @@ nav {
       caret-color: var(--clr-primary-100);
     }
 
+    input.dark-mode {
+      background-color: var(--clr-dark-mode-300);
+      color: var(--clr-dark-mode-100);
+      box-shadow: none;
+    }
+
     ::placeholder {
       color: var(--clr-primary-300);
     }
@@ -244,6 +250,12 @@ nav {
   .bio.dark-mode {
     color: var(--clr-dark-mode-100);
   }
+}
+
+.user-container.dark-mode {
+  background-color: var(--clr-dark-mode-300);
+  color: var(--clr-dark-mode-100);
+  box-shadow: none;
 }
 
 // User Header
@@ -498,24 +510,4 @@ nav {
     grid-area: user-content;
     margin-left: 2.5rem;
   }
-}
-
-// Dark mode
-
-.bg-dark {
-  background-color: var(--clr-dark-mode-300);
-  color: var(--clr-dark-mode-100);
-}
-
-// .dark-mode {
-//   color: var(--clr-dark-mode-100);
-// }
-
-// .user-header__info .date.dark-mode {
-//   color: var(--clr-dark-mode-100);
-// }
-
-.stats-dark-mode {
-  background-color: var(--clr-dark-mode-200);
-  color: var(--clr-dark-mode-100);
 }
