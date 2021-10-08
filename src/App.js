@@ -44,7 +44,12 @@ function App() {
           />
 
           {status === 'loading' ? (
-            <p>Loading...</p>
+            <div className="lds-ellipsis">
+              <div className={theme === 'dark' ? 'dark-mode' : ''} />
+              <div className={theme === 'dark' ? 'dark-mode' : ''} />
+              <div className={theme === 'dark' ? 'dark-mode' : ''} />
+              <div className={theme === 'dark' ? 'dark-mode' : ''} />
+            </div>
           ) : status === 'error' ? (
             <p>Error: {error.message}</p>
           ) : (
