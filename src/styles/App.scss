@@ -187,6 +187,10 @@ nav {
       box-shadow: none;
     }
 
+    input.dark-mode::placeholder {
+      color: var(--clr-dark-mode-100);
+    }
+
     ::placeholder {
       color: var(--clr-primary-300);
     }
