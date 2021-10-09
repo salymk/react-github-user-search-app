@@ -14,6 +14,7 @@ const Header = ({ toggleTheme }) => {
           onClick={toggleTheme}
           className={`toggle-btn ${theme === 'dark' ? 'dark-mode' : ''}`}
           type="button"
+          aria-label="Toggle button to change light and dark themes"
         >
           {theme === 'light' ? (
             <div className="dark-icon">
