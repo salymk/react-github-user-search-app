@@ -45,6 +45,11 @@
 
 // Base
 
+/* suppress focus ring on form controls for mouse users */
+[data-whatintent="mouse"] *:focus {
+  outline: none;
+}
+
 body {
   font-size: 15px;
   font-weight: var(--fw-400);
@@ -556,20 +561,7 @@ nav {
 }
 
 // Dark mode dots
-
-.lds-ellipsis div.dark-mode:nth-child(1) {
-  background: var(--clr-dark-mode-100);
-}
-
-.lds-ellipsis div.dark-mode:nth-child(2) {
-  background: var(--clr-dark-mode-100);
-}
-
-.lds-ellipsis div.dark-mode:nth-child(3) {
-  background: var(--clr-dark-mode-100);
-}
-
-.lds-ellipsis div.dark-mode:nth-child(4) {
+.lds-ellipsis > div.dark-mode {
   background: var(--clr-dark-mode-100);
 }
 
