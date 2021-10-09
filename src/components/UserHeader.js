@@ -19,7 +19,7 @@ const UserHeader = (props) => {
             </h2>
             <a
               className="username"
-              href={props.url}
+              href={`https://github.com/${props.login}`}
               target="_blank"
               rel="noreferrer"
             >
@@ -42,7 +42,6 @@ export default UserHeader;
 UserHeader.propTypes = {
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
   login: PropTypes.string.isRequired,
   created_at: PropTypes.string.isRequired,
 };
