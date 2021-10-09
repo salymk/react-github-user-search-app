@@ -1,5 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import React, { useState } from 'react';
+import whatInput from 'what-input';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import './styles/App.scss';
