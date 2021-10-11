@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [frontendmentor.io](https://your-solution-url.com)
+- Solution URL: [frontendmentor.io](https://www.frontendmentor.io/solutions/handled-data-fetching-with-react-query-iYzh20gQX)
 - Live Site URL: [react-github-user-search-app.vercel.app](https://react-github-user-search-app.vercel.app/)
 
 ## My process
