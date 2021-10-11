@@ -1,6 +1,8 @@
 /* eslint-disable no-nested-ternary */
 import React, { useState } from 'react';
 import whatInput from 'what-input';
+import { Helmet } from 'react-helmet';
+
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import './styles/App.scss';
@@ -34,6 +36,12 @@ function App() {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>devfinder</title>
+        <meta name="GitHub user search app" />
+        <meta name="theme-color" content="#F2F2F2" />
+      </Helmet>
       <ThemeProvider value={theme}>
         <Header toggleTheme={toggleTheme} />
         <main className="container">
